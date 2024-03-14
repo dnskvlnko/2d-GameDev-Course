@@ -1,9 +1,9 @@
 extends Sprite2D
+var velocity := Vector2(500, -500)
 
-# Change the bullet's velocity to move towards the top right.
-var velocity := Vector2(500, 0)
-
-# Complete the process function to make the bullet move based on the velocity
-# vector. Also, rotate the bullet to match the velocity vector's angle.
 func _process(delta: float) -> void:
-	pass
+	position += velocity * delta
+	rotation = velocity.angle()
+
+var max_speed := 600.0
+
