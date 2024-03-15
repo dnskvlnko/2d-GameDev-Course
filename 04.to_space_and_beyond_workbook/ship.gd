@@ -26,5 +26,4 @@ func _process(delta: float) -> void:
 		rotation = velocity.angle()
 
 
-func _on_timer_timeout() -> void:
-	max_speed = normal_speed
+
