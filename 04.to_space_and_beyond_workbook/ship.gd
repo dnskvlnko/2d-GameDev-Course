@@ -1,6 +1,9 @@
 extends Sprite2D
 
-var max_speed := 600.0
+var boost_speed := 1500.0
+var normal_speed := 600.0
+
+var max_speed := normal_speed
 var velocity := Vector2(0, 0)
 
 
@@ -12,6 +15,10 @@ func _process(delta: float) -> void:
 	if direction.length() > 1.0:
 		direction = direction.normalized()
 
+	if Input.is_action_just_pressed("boost"):
+		max_speed = boost_speed
+		get_node("Timer").start()
+
 	velocity = direction * max_speed
 	position += velocity * delta
 
@@ -19,3 +26,5 @@ func _process(delta: float) -> void:
 		rotation = velocity.angle()
 
 
+func _on_timer_timeout() -> void:
+	max_speed = normal_speed
