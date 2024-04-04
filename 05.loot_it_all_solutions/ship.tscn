@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c85nv7p1k48d6"]
+
+[ext_resource type="PackedScene" uid="uid://bxu6ag24iy80l" path="res://lessons_reference/04.spawn_items_randomly/ship.tscn" id="1_7pgrw"]
+
+[node name="Ship" instance=ExtResource("1_7pgrw")]
+
+[node name="MainThruster" parent="Sprite2D" index="0"]
+points = PackedVector2Array(0, 0, 33.3333, 0, 66.6667, 0)
+
+[node name="GemCount" parent="UI" index="2"]
+layout_mode = 0

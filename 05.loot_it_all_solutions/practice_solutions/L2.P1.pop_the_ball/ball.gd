@@ -1,9 +1,1 @@
-extends Area2D
-
-
-func _ready() -> void:
-	area_entered.connect(_on_area_entered) #pass
-
-
-func _on_area_entered(area_that_entered: Area2D) -> void: #
-	queue_free() #
+"res://lessons_reference/04.spawn_items_randomly/ship.gd""res://lessons_reference/04.spawn_items_randomly/ship.gd"
