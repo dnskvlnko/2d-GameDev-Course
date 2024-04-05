@@ -44,7 +44,7 @@ offset_top = 3.0
 offset_right = 38.0
 offset_bottom = 43.0
 
-[node name="ProgressBar" type="ProgressBar" parent="UI"]
+[node name="HealthBar" type="ProgressBar" parent="UI"]
 layout_mode = 0
 offset_left = -69.0
 offset_top = -69.0
