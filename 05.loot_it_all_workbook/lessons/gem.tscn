@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://03hqul3hjkm6"]
+
+[ext_resource type="PackedScene" uid="uid://03hqul3hjkm6" path="res://lessons/gem.tscn" id="1_jughg"]
+[ext_resource type="Texture2D" uid="uid://d0bh8am2qd005" path="res://assets/gem_icon.png" id="1_s4j1b"]
+
+[node name="Gem" instance=ExtResource("1_jughg")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(240, 103)
+texture = ExtResource("1_s4j1b")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(239, 101)
