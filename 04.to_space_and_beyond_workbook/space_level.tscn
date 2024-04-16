@@ -16,7 +16,7 @@ rotation = 1.20985
 
 [node name="MainThruster" parent="Ship" instance=ExtResource("3_0khg8")]
 position = Vector2(-33, 0)
-points = PackedVector2Array(0, 0, 33.3333, 0, 44, -9.15527e-05, 66.6667, 0)
+points = PackedVector2Array(0, 0, 33.3333, 0, 66.6667, 0)
 
 [node name="SideThruster" parent="Ship" instance=ExtResource("2_1vucp")]
 position = Vector2(-46, -21)
