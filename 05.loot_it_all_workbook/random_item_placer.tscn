@@ -9,3 +9,4 @@ script = ExtResource("1_bk46o")
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(952, 538)
