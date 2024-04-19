@@ -9,7 +9,6 @@ func _ready() -> void:
 func play_floating_animation() -> void:
 	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_SINE)
-
 	var sprite_2d := get_node("Sprite2D")
 	var position_offset := Vector2(0.0, 4.0)
 	var duration = randf_range(0.8, 1.2)
