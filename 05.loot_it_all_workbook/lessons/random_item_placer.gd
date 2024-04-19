@@ -1,13 +1,11 @@
 extends Node2D
 
 var item_scenes := [
-	preload("gem.tscn"),
-	preload("res://healing_item.tscn")
+	preload("res://lessons/gem.tscn"),
+	preload("res://lessons/healing_item.tscn")
 ]
 
 
-func _ready() -> void:
-	get_node("Timer").timeout.connect(_on_timer_timeout)
 
 
 func _on_timer_timeout() -> void:

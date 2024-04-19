@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3rbrb50at5tp"]
+[gd_scene load_steps=3 format=3 uid="uid://d3rbrb50at5tp"]
 
 [ext_resource type="PackedScene" path="res://practices/L6.P1.create_coins/ship_create_coins.tscn" id="1_x2knq"]
+[ext_resource type="Script" path="res://practices/L6.P1.create_coins/Coin.gd" id="2_y2adm"]
 
 [node name="CreateCoins" type="Node2D"]
 
@@ -23,3 +24,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.219608, 0.317647, 0.776471, 1)
+
+[node name="Coin" type="Area2D" parent="."]
+script = ExtResource("2_y2adm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Coin"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
