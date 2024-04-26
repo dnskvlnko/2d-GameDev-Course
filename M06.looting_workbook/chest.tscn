@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhsdoaoxrpy2x"]
+[gd_scene load_steps=11 format=3 uid="uid://bhsdoaoxrpy2x"]
 
 [ext_resource type="Texture2D" uid="uid://c3hwsm5ugp8qw" path="res://lessons/chest/bottom.png" id="1_2khpr"]
 [ext_resource type="Shader" path="res://lessons/chest/group_outline.gdshader" id="1_3kcnw"]
@@ -16,10 +16,47 @@ shader_parameter/line_color = Color(0, 0, 0, 1)
 shader_parameter/line_thickness = 6.0
 shader_parameter/viewport_scale = Vector2(1, 1)
 
+[sub_resource type="Animation" id="Animation_0at5d"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, -11), Vector2(62, -64), Vector2(117, 45)]
+}
+
+[sub_resource type="Animation" id="Animation_bvxrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Top:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -11)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qlck"]
+_data = {
+"RESET": SubResource("Animation_bvxrr"),
+"open": SubResource("Animation_0at5d")
+}
+
 [node name="Chest" type="Area2D"]
 script = ExtResource("1_smtkp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_tthhu")
 
@@ -39,3 +76,8 @@ position = Vector2(-1, 13)
 texture = ExtResource("3_cjwwy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7qlck")
+}
